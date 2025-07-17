@@ -30,7 +30,7 @@ jobs:
         run: npm run build
       - name: Publishfiles
         id: publish
-        run: find dist/assets/*.js  -type f -execdir echo 'script-file={}' >> $GITHUB_OUTPUT ';'  ## Find the js files in the dist/assets directory and print their names
+        run: find dist/assets/*.js  -type f -execdir echo 'script-file={}' >> $GITHUB_OUTPUT ';' ## Find the js files in the dist/assets directory and print their names
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4 ## Upload the build artifacts
         with: ## Specify the path to the build directory, additional configuration
