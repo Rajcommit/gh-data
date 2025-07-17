@@ -24,13 +24,13 @@ jobs:
         run: npm ci
       - name: Build website
         run: npm run build
-      - name: Upload build artifacts 
+      - name: Upload build artifacts
         uses: actions/upload-artifact@v4 ## Upload the build artifacts
-        with:  ## Specify the path to the build directory, additional configuration
-          name: build  ## name for retriving the artifacts
+        with: ## Specify the path to the build directory, additional configuration
+          name: build ## name for retriving the artifacts
           path: |
-           dist  ## Path describes the directory where the build artifacts are stored
-           pakage.json
+            dist  ## Path describes the directory where the build artifacts are stored
+            pakage.json
           ## path/output/bin/  ## include and save the files here
           ## path/output/test-results put the result artifacts here
           ## !path/**/*.tmp ## Exclude any template files
