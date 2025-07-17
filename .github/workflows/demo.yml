@@ -52,5 +52,7 @@ jobs:
           name: build ## Name of the artifact to download must be same as the one uploaded in abve job
       - name: Output file-lists
         run: ls -R
+      - name: Output filename
+        run: echo "Script file is ${{needs.build.outputs.script-file}}" ## Use the output variable from the build job
       - name: Deploy
         run: echo "Deploying..."
