@@ -25,7 +25,7 @@ jobs:
       - name: Build website
         run: npm run build
       - name: Upload build artifacts 
-        uses: actions/upload-artifact@v3 ## Upload the build artifacts
+        uses: actions/upload-artifact@v4 ## Upload the build artifacts
         with:  ## Specify the path to the build directory, additional configuration
           name: build  ## name for retriving the artifacts
           path: |
